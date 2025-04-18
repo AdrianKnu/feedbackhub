@@ -4,6 +4,9 @@ import com.knuppelholz.feedbackhub.dto.CreateSurveyRequest;
 import com.knuppelholz.feedbackhub.dto.SurveyResponse;
 import com.knuppelholz.feedbackhub.service.SurveyService;
 import lombok.RequiredArgsConstructor;
+
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,4 +22,10 @@ public class SurveyController {
         SurveyResponse response = surveyService.createSurvey(request);
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping
+    public ResponseEntity<List<SurveyResponse>> getAllSurveys() {
+        return ResponseEntity.ok(surveyService.getAllSurveys());
+    }
+
 }

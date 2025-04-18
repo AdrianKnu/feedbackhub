@@ -42,4 +42,18 @@ public class SurveyService {
 
         return response;
     }
+
+    public List<SurveyResponse> getAllSurveys() {
+        return surveyRepository.findAll().stream().map(survey -> {
+            SurveyResponse response = new SurveyResponse();
+            response.setId(survey.getId());
+            response.setTitle(survey.getTitle());
+            response.setDescription(survey.getDescription());
+            response.setQuestions(
+                    survey.getQuestions().stream().map(Question::getText).toList()
+            );
+            return response;
+        }).toList();
+    }
+    
 }
