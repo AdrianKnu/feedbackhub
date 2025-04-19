@@ -68,6 +68,6 @@ Se utiliza JWT para la autenticación. Los usuarios deben registrarse e iniciar 
 
 Adrián Knüppelholz – Tesista de Ingeniería en Informática y Backend Java Developer.  
 Este proyecto forma parte de mi portfolio personal.  
-[LinkedIn](https://www.linkedin.com/) • [GitHub](https://github.com/)
+[LinkedIn](www.linkedin.com/in/adrian-knuppelholz) • [GitHub](https://github.com/AdrianKnu)
 
 ---
